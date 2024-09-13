@@ -1,43 +1,56 @@
 package ex5;
 
+/**
+ * Représente un article avec un nom et un poids.
+ */
 public class Item {
 
     private String nom;
     private int poids;
 
     /**
-     * Getter pour l'attribut nom
-     *
-     * @return the nom
+     * Getter pour le nom.
+     * 
+     * @return le nom.
      */
     public String getNom() {
         return nom;
     }
 
     /**
-     * Setter pour l'attribut nom
-     *
-     * @param nom the nom to set
+     * Setter pour le nom.
+     * 
+     * @param nom Le nom à définir.
      */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
     /**
-     * Getter pour l'attribut poids
-     *
-     * @return the poids
+     * Getter pour le poids.
+     * 
+     * @return le poids.
      */
     public int getPoids() {
         return poids;
     }
 
     /**
-     * Setter pour l'attribut poids
-     *
-     * @param poids the poids to set
+     * Setter pour le poids.
+     * 
+     * @param poids Le poids à définir.
      */
     public void setPoids(int poids) {
         this.poids = poids;
+    }
+
+    /**
+     * Détermine si l'article est accepté par la caisse.
+     * 
+     * @return true si l'article est accepté, false sinon.
+     */
+    public boolean isAccepted() {
+        // Exemple de logique : accepter uniquement les articles pesant 1000 unités ou moins
+        return this.poids <= 1000;
     }
 }
